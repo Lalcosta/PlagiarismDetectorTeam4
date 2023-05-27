@@ -1,0 +1,1 @@
+Goodman et al. discuss how AI technologies like the natural lan-guage processing model Chat-GPT could potentially transform healthcare through knowledge dissemination and personalized patient education. Before these tools can be safely integrated into healthcare, research and development of robust oversight mechanisms are necessary to ensure their accuracy and reliability.

@@ -1,0 +1,2 @@
+Text comparison algorithms 
+Nowadays, students have access to thousands of reliable sources for their projects or assignments. However, this has led to an increase of plagiarism cases, threatening academic integrity and diminishing learning opportunities. Therefore, this paper will focus on the performance of different text comparison algorithms that are characterized by identifying similarities and differences between texts. The algorithms to be studied are: word embeddings, longest common subsequence (LCS) and term frequency-inverse document frequency (TF-IDF).

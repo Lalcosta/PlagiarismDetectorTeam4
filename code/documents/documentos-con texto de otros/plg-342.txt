@@ -1,0 +1,2 @@
+The rise of Artificial Intelligence (AI) technology and its impact on education has been a topic of growing concern in recent years. 
+It has come to our attention that the use of chatbots, particularly ChatGPT, for generating academic essays at schools and colleges has sparked fears among scholars. It is known that to this day there are many sentence similarity features that were used to detect plagiarism. This implies a rampant problem for the discovery of lexical, syntactic and semantic text plagiarism types to be a challenging problem.

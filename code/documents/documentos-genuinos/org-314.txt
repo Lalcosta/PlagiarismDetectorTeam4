@@ -1,0 +1,8 @@
+In this paper a computational algorithm for text alignment in the task of automatically
+detecting bilingual plagiarism is proposed. The method of detecting bilingual plagiarism uses
+machine translation services, in order to have the documents in question a base language, and
+apply techniques of monolingual plagiarism. The algorithm was tested with The corpus
+belonging to the International Competition Plagiarism 2013, with the objective of evaluating
+the step of detecting monolingual plagiarism. Besides it’s experimented with the collection of
+texts EUROPARL, a collection of documents pertaining to the meeting the European
+Parliament, specifically it´s to English and Spanish documents

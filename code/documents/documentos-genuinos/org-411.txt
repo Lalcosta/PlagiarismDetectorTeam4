@@ -1,0 +1,11 @@
+Search engines are vulnerable to attacks against indexing and
+searching via text encoding manipulation. By imperceptibly perturbing text using uncommon encoded representations, adversaries
+can control results across search engines for specific search queries.
+We demonstrate that this attack is successful against two major
+commercial search engines - Google and Bing - and one open source
+search engine - Elasticsearch. We further demonstrate that this attack is successful against LLM chat search including Bing’s GPT-4
+chatbot and Google’s Bard chatbot. We also present a variant of the
+attack targeting text summarization and plagiarism detection models, two ML tasks closely tied to search. We provide a set of defenses
+against these techniques and warn that adversaries can leverage
+these attacks to launch disinformation campaigns against unsuspecting users, motivating the need for search engine maintainers
+to patch deployed systems.

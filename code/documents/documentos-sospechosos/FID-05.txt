@@ -1,0 +1,5 @@
+Hoy en día el idioma ha dejado de ser una barrera para plagiar documentos disponibles en Internet. Tras enfoques probabilísticos ya clásicos que no alcanzan buenos resultados con documentos multilingües con paráfrasis.
+
+En respuesta a la creciente facilidad para plagiar documentos en Internet, se ha desarrollado un algoritmo computacional que aborda la detección de plagio bilingüe.
+
+En este trabajo se construyó un algoritmo computacional para la alineación de textos en la tarea de detección de plagio bilingüe. El método de detección de plagio bilingüe hace uso del servicio de traductores automáticos, con la finalidad de tener los documentos en cuestión en un idioma base, para después aplicar técnicas de plagio monolingüe.

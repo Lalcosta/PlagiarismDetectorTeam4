@@ -1,0 +1,2 @@
+MOSS
+Technology and computer careers have increased in popularity, whether it be for the high salaries, flexibility, societal impact, or growth opportunities. The skills that characterize these professions are programming in different languages and being able to develop software.  Likewise, plagiarism of source code has increased in educational institutions affecting learning opportunities and the academic integrity of students. This paper focuses on the operation of the MOSS (Measure Of Software Similarity) tool to identify potential cases of code plagiarism.

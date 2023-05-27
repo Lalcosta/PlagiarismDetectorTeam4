@@ -1,0 +1,1 @@
+﻿A survey of computer algorithms used for the detection of student plagiarism is presented. A summary of several algorithms is provided. Common features of the different plagiarism detection algorithms are described. Ethical and administrative issues involving detected plagiarism are discussed.

@@ -1,0 +1,3 @@
+The most common interpretation is simply to replace some words with synonyms and to change the order of some phrases without changing their meaning. Another interpretation is to reconstruct the word in a more general way without losing the essence of the original message. There are two main methods of creating an interpretation:
+- Mechanical interpretation: this consists of replacing expressions in the text with synonyms or alternative phrases, with minimal syntactic changes.
+- Constructive interpretation: rewriting a statement, creating a different statement with completely different characteristics but keeping the same meaning.
