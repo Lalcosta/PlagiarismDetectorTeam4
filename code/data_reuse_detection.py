@@ -41,10 +41,18 @@ nltk.download('averaged_perceptron_tagger')
 #                        VARIABLES                               #
 #----------------------------------------------------------------#
 # Variables base para la ubicacion LOCAL ABSOLUTA de los textos de este proyecto
-file_path_G = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-genuinos"
-file_path_SUS = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-sospechosos"
-file_path_OH = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-con texto de otros"
-
+#Ruta local de Roberto
+#file_path_G = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-genuinos"
+#file_path_SUS = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-sospechosos"
+#file_path_OH = r"C:\Users\rober\OneDrive\Escritorio\Repositorios\PlagiarismDetectorTeam4\code\documents\documentos-con texto de otros"
+#Ruta local de Eduardo
+file_path_G=r"C:\Users\laloa\Documents\0ITC\8.OctavoSemestre\Aplicaciones avanzadas\Reto\PlagiarismDetectorTeam4\code\documents\documentos-genuinos"
+file_path_SUS=r"C:\Users\laloa\Documents\0ITC\8.OctavoSemestre\Aplicaciones avanzadas\Reto\PlagiarismDetectorTeam4\code\documents\documentos-sospechosos"
+file_path_OH=r"C:\Users\laloa\Documents\0ITC\8.OctavoSemestre\Aplicaciones avanzadas\Reto\PlagiarismDetectorTeam4\code\documents\documentos-con texto de otros"
+#PARA EJECUTAR EL CÓDIGO AÑADIR LA RUTA LOCAL DEL USUARIO EN USO Y COMENTAR LOS DEMÁS USUARIOS
+#file_path_G=r"CARPETA----documentos-genuinos"
+#file_path_SUS=r"CARPETA----documentos-sospechosos"
+#file_path_OH=r"CARPETA----documentos-con texto de otros"
 #----------------------------------------------------------------#
 #                           CODIGO                               #
 #----------------------------------------------------------------#
