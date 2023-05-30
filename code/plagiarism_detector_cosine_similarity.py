@@ -83,11 +83,11 @@ def plagiarism_detector(text1, text2):
     similarity_scores = cosine_similarity(vectors)
     
     # Imprime los puntajes de similitud para cada conjunto de características
-    print("Unigrams similarity score:", similarity_scores[0, 1])
-    print("Bigrams similarity score:", similarity_scores[1, 2])
-    print("Trigrams similarity score:", similarity_scores[2, 3])
-    print("Lemmas similarity score:", similarity_scores[3, 4])
-    print("Stems similarity score:", similarity_scores[4, 5])
+    print("Bigrams similarity score:", similarity_scores[0, 1])
+    print("Trigrams similarity score:", similarity_scores[1, 2])
+    print("Lemmas similarity score:", similarity_scores[2, 3])
+    print("Stems similarity score:", similarity_scores[3, 4])
+  
     
     # Verifica si hay plagio basado en los puntajes de similitud en este caso consideramos un ubral de 0.9
     #Es decir que si la similitud de coseno es mayor a 0.9 es indice de plágio
