@@ -19,7 +19,8 @@ Fecha de Finalizado_ N/A
 #Importamos las librerías necesarias
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 #importamos la función para realizar el tratamiento de los datos
 import data_reuse_detection
 
@@ -96,5 +97,114 @@ def plagiarism_detector(text1, text2):
         print("Plagiarism detected!")
     else:
         print("No plagiarism detected.")
+        
+        
+        
+        
+
+
+
+def calculate_ngrams_distances(list1, list2):
+    #Ajustamos las listas de listas de tuplas a listas de listas
+    text1 = [' '.join([' '.join(bigram) for bigram in sublist]) for sublist in list1]
+    text2 = [' '.join([' '.join(bigram) for bigram in sublist]) for sublist in list2]
+
+    #Creamos un vectorizador
+    vectorizer = TfidfVectorizer()
+
+    tfidf_matrix1 = vectorizer.fit_transform(text1)
+
+    #Lista para almacenar los resultados
+    results = []
+
+    # Calculamos la similitud de coseno para cada elemento de la lista 2
+    for i in range(len(list2)):
+        #Vectorizamos el elemento i de la lista 2
+        tfidf_matrix2 = vectorizer.transform([text2[i]])
+        #Obtenemos la similitud de coseno entre i y cada elemento de la lista 1
+        distances = cosine_similarity(tfidf_matrix2, tfidf_matrix1)[0]
+        #Ordemos los valores obtenidos y obtenemos las 3 más grandes
+        closest_indices = np.argsort(distances)[-3:]
+        #Almacenamos el indice de las 3 distancias más grandes
+        closest_distances = distances[closest_indices]
+        #Guardamos los elementos anteriores en results
+        results.append((closest_distances, closest_indices))
+
+    #Imprimimos los resultados
+    for i, (distances, indices) in enumerate(results):
+        print(f"Documento sospechoso {i+1}:")
+        for distance, index in zip(distances, indices):
+            print(f"  Distancia: {distance}, con el documento genuino: {index+1}")    
+            
+    return results
+
+
+
+def calculate_stems_lemmas_distances(list1, list2):
+    # Ajustamos las listas
+    text1 = [' '.join(sublist) for sublist in list1]
+    text2 = [' '.join(sublist) for sublist in list2]
     
-plagiarism_detector(text1,text2)
+    #Creamos un Vectorizador
+    vectorizer = TfidfVectorizer()
+
+    # Vectorizamos la lista 1
+    tfidf_matrix1 = vectorizer.fit_transform(text1)
+
+    #Lista para almacenar los resultados
+    results = []
+
+    # Calculamos la similitud de coseno para cada elemento de la lista 2
+    for i in range(len(list2)):
+        #Vectorizamos el elemento i de la lista 2
+        tfidf_matrix2 = vectorizer.transform([text2[i]])
+        #Obtenemos la similitud de coseno entre i y cada elemento de la lista 1
+        distances = cosine_similarity(tfidf_matrix2, tfidf_matrix1)[0]
+        #Ordemos los valores obtenidos y obtenemos las 3 más grandes
+        closest_indices = np.argsort(distances)[-3:]
+        #Almacenamos el indice de las 3 distancias más grandes
+        closest_distances = distances[closest_indices]
+        #Guardamos los elementos anteriores en results
+        results.append((closest_distances, closest_indices))
+
+    #Imprimimos los resultados
+    for i, (distances, indices) in enumerate(results):
+        print(f"Documento sospechoso {i+1}:")
+        for distance, index in zip(distances, indices):
+            print(f"  Distancia: {distance}, con el documento genuino: {index+1}")    
+            
+    return results
+
+
+'''def calculate_true_positives_and_false_negatives(list1, list2):
+    # Calculate the closest distances
+    results = calculate_stems_lemmas_distances(list1, list2)
+
+    true_positives = 0
+    false_negatives = 0
+
+    # Iterate over each column in the results matrix
+    for distances, _ in results:
+        max_distance = np.max(distances)
+
+        if max_distance > 0.7:
+            true_positives += 1
+        else:
+            false_negatives += 1
+
+    return true_positives, false_negatives'''
+
+print("BIGRAMAS")
+calculate_ngrams_distances(list_of_bigrams_by_text_G, list_of_bigrams_by_text_SUS)
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("TRIGRAMAS")
+calculate_ngrams_distances(list_of_trigrams_by_text_G,list_of_unigrams_by_text_SUS)
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("LEMMAS")
+calculate_stems_lemmas_distances(list_of_lema_text_G,list_of_lema_text_SUS)
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("-----------------------------------------------------------\n-----------------------------------------------------------")
+print("STEMS")
+calculate_stems_lemmas_distances(list_of_stemming_text_G,list_of_stemming_text_SUS)
